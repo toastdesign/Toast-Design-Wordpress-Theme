@@ -2,12 +2,12 @@
 /**
  * widget-business-hours.php
  * 
- * Plugin Name: Alpha_Widget_Business_Hours
- * Plugin URI: http://www.adipurdila.com
+ * Plugin Name: Toast_Widget_Business_Hours
+ * Plugin URI: http://www.toastdesign.nl
  * Description: A widget that displays business hours.
  * Version: 1.0
- * Author: Adi Purdila
- * Author URI: http://www.adipurdila.com
+ * Author: Daniel Plinsinga
+ * Author URI: http://www.toastdesign.nl
 */
 
 class Toast_Widget_Business_Hours extends WP_Widget {

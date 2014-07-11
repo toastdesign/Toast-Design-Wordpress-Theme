@@ -18,10 +18,10 @@ class Toast_Widget_Business_Hours extends WP_Widget {
 	public function __construct() {
 		parent::__construct( 
 			'widget-business-hours',
-			__( 'Toast: Business Hours', 'toast' ),
+			__( 'Openingstijden Widget', 'toast' ),
 			array(
-				'classname'   => 'widget-business-hours',
-				'description' => __( 'A custom widget that displays business hours.', 'toast' )
+				'classname'   => 'widget-openingstijden',
+				'description' => __( 'Een widget om de openingstijden te kunnen weergeven', 'toast' )
 			) 
 		);
 	}
@@ -33,11 +33,11 @@ class Toast_Widget_Business_Hours extends WP_Widget {
 	public function form( $instance ) {
 		// Default widget settings
 		$defaults = array(
-			'title'               => 'Business Hours',
+			'title'               => 'Openingstijden',
 			'hours_description'   => '',
-			'hours_monday_friday' => '8am to 5pm',
-			'hours_saturday'      => 'Closed',
-			'hours_sunday'        => 'Closed'
+			'hours_monday_friday' => '09:00 - 18:00',
+			'hours_saturday'      => 'Gesloten',
+			'hours_sunday'        => 'Gesloten'
 		);
 
 		$instance = wp_parse_args( (array) $instance, $defaults );
@@ -45,31 +45,31 @@ class Toast_Widget_Business_Hours extends WP_Widget {
 		// The widget content ?>
 		<!-- Title -->
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'toast' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Titel:', 'toast' ); ?></label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo esc_attr( $instance['title'] ); ?>">
 		</p>
 
 		<!-- Description -->
 		<p>
-			<label for="<?php echo $this->get_field_id( 'hours_description' ); ?>"><?php _e( 'Description:', 'toast' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'hours_description' ); ?>"><?php _e( 'Beschrijving:', 'toast' ); ?></label>
 			<textarea cols="30" rows="3" class="widefat" id="<?php echo $this->get_field_id( 'hours_description' ); ?>" name="<?php echo $this->get_field_name( 'hours_description' ); ?>"><?php echo esc_textarea( $instance['hours_description'] ); ?></textarea>
 		</p> 
 
 		<!-- Monday-Friday -->
 		<p>
-			<label for="<?php echo $this->get_field_id( 'hours_monday_friday' ); ?>"><?php _e( 'Monday-Friday:', 'toast' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'hours_monday_friday' ); ?>"><?php _e( 'Maandag-Vrijdag:', 'toast' ); ?></label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'hours_monday_friday' ); ?>" name="<?php echo $this->get_field_name( 'hours_monday_friday' ); ?>" value="<?php echo esc_attr( $instance['hours_monday_friday'] ); ?>">
 		</p>
 
 		<!-- Saturday -->
 		<p>
-			<label for="<?php echo $this->get_field_id( 'hours_saturday' ); ?>"><?php _e( 'Saturday:', 'toast' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'hours_saturday' ); ?>"><?php _e( 'Zaterdag:', 'toast' ); ?></label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'hours_saturday' ); ?>" name="<?php echo $this->get_field_name( 'hours_saturday' ); ?>" value="<?php echo esc_attr( $instance['hours_saturday'] ); ?>">
 		</p>
 
 		<!-- Sunday -->
 		<p>
-			<label for="<?php echo $this->get_field_id( 'hours_sunday' ); ?>"><?php _e( 'Sunday:', 'toast' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'hours_sunday' ); ?>"><?php _e( 'Zondag:', 'toast' ); ?></label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'hours_sunday' ); ?>" name="<?php echo $this->get_field_name( 'hours_sunday' ); ?>" value="<?php echo esc_attr( $instance['hours_sunday'] ); ?>">
 		</p> <?php
 	}
@@ -120,21 +120,21 @@ class Toast_Widget_Business_Hours extends WP_Widget {
 
 		if ( $hours_monday_friday ) : ?>
 			<li>
-				<span><?php _e( 'Monday-Friday: ', 'toast' ); ?></span>
+				<span><?php _e( 'Maandag - Vrijdag: ', 'toast' ); ?></span>
 				<?php echo $hours_monday_friday; ?>
 			</li>
 		<?php endif;
 
 		if ( $hours_saturday ) : ?>
 			<li>
-				<span><?php _e( 'Saturday: ', 'toast' ); ?></span>
+				<span><?php _e( 'Zaterdag: ', 'toast' ); ?></span>
 				<?php echo $hours_saturday; ?>
 			</li>
 		<?php endif;
 
 		if ( $hours_sunday ) : ?>
 			<li>
-				<span><?php _e( 'Sunday: ', 'toast' ); ?></span>
+				<span><?php _e( 'Zondag: ', 'toast' ); ?></span>
 				<?php echo $hours_sunday; ?>
 			</li>
 		<?php endif;

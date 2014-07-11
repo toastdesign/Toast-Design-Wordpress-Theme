@@ -40,6 +40,8 @@ class Toast_Widget_Contact_Gegevens extends WP_Widget {
         );
 
         $instance = wp_parse_args( (array) $instance, $defaults );
+
+        // The widget content ?>
     }
 }
 

@@ -53,7 +53,7 @@
             <?php get_sidebar(); ?>
 
             </div> <!-- Einde row -->
-    </div> <!-- Einde container
+    </div> <!-- Einde container -->
 
     <?php get_footer(); ?>
 

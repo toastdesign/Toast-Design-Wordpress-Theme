@@ -28,3 +28,16 @@
 
     <?php wp_head(); ?>
 </head>
+<body <?php body_class(); ?>>
+
+    <!--[if lt IE 8]>
+        <div class="alert alert-warning">
+            <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'toast'); ?>
+        </div>
+    <![endif]-->
+
+    <?php get_header(); ?>
+
+    <!-- MAIN CONTENT AREA -->
+    <div class="container">
+        <div class="row">

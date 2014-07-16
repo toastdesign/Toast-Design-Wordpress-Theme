@@ -1,12 +1,10 @@
 <?php 
 /**
- * page.php
- *
  * Template Name: Full Width Template
  */
 ?>
 
-<?php get_header(); ?>
+<?php get_template_part('templates/head'); ?>
 
     <div class="main-content" role="main">
         <?php while( have_posts() ) : the_post(); ?>

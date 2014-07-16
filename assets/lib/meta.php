@@ -10,7 +10,7 @@ if ( ! function_exists('toast_post_meta') ) {
         if ( get_post_type() === 'post') {
             // Als het een sticky post is geef dit dan aan
             if (is_sticky() ) {
-                echo '<li class="meta-featured-post"><i class="fa fa-thumb-tack"></i>' . __('Sticky', 'toast' ) . '</li>';
+                echo '<li class="meta-featured-post"><i class="fa fa-fw fa-thumb-tack"></i>' . __('Sticky', 'toast' ) . '</li>';
             }
 
             // Toon de auteur

@@ -1,11 +1,3 @@
-<?php 
-/**
- * archive.php
- *
- * The template for displaying archive pages.
- */
-?>
-
 <?php get_header(); ?>
 
 	<div class="main-content col-md-8" role="main">

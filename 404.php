@@ -1,12 +1,4 @@
-<?php 
-/**
- * 404.php
- *
- * The template for displaying 404 pages (Not Found).
- */
-?>
-
-<?php get_header(); ?>
+<?php get_template_part('templates/head'); ?>
 
 	<div class="container-404">
 		<h1><?php _e( 'Error 404 - Nothing Found', 'toast' ); ?></h1>

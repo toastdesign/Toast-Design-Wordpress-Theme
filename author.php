@@ -1,12 +1,4 @@
-<?php 
-/**
- * author.php
- *
- * The template for displaying author archive pages.
- */
-?>
-
-<?php get_header(); ?>
+<?php get_template_part('templates/head'); ?>
 
 	<div class="main-content col-md-8" role="main">
 		<?php if ( have_posts() ) : the_post(); ?>

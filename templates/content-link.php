@@ -1,11 +1,3 @@
-<?php 
-/**
- * content-link.php
- *
- * Dit is het standaard template voor het tonen van articelen
- */
-?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>    
     <!-- Article content -->
     <div class="entry-content">

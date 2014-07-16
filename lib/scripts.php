@@ -16,7 +16,7 @@ if ( ! function_exists( 'toast_scripts' ) ) {
         wp_register_script( 'bootstrap-js', 'http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js', array( 'jquery' ), false, true );
         wp_register_script( 'toast-custom', SCRIPTS . '/scripts.js', array( 'jquery' ), false, true );
 
-        // Load the custom scripts
+        // Load the scripts
         wp_enqueue_script( 'bootstrap-js' );
         wp_enqueue_script( 'toast-custom' );
 

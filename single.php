@@ -1,20 +1,31 @@
-<?php
-/**
- * single.php
- *
- * The template for displaying single posts.
- */
-?>
+<?php get_template_part('templates/head'); ?>
+<body <?php body_class(); ?>>
 
-<?php get_header(); ?>
+    <!--[if lt IE 8]>
+        <div class="alert alert-warning">
+            <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'toast'); ?>
+        </div>
+    <![endif]-->
+    
+    <?php get_header(); ?>
 
-    <div class="main-content col-md-8" role="main">
-        <?php while( have_posts() ) : the_post(); ?>
-            <?php get_template_part( 'templates/content', get_post_format() ); ?>
-            <?php comments_template(); ?>
-        <?php endwhile; ?>
-    </div> <!-- end main-content -->
+    <!-- MAIN CONTENT AREA -->
+    <div class="container">
+        <div class="row">
 
-<?php get_sidebar(); ?>
+            <div class="main-content col-md-8" role="main">
+                <?php while( have_posts() ) : the_post(); ?>
+                    <?php get_template_part( 'templates/content', get_post_format() ); ?>
+                    <?php comments_template(); ?>
+                <?php endwhile; ?>
+            </div> <!-- end main-content -->
 
-<?php get_footer(); ?>
+            <?php get_sidebar(); ?>
+
+        </div> <!-- Einde row -->
+    </div> <!-- Einde container -->
+
+    <?php get_footer(); ?>
+
+</body>
+</html>

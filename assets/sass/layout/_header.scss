@@ -8,10 +8,12 @@
  * Main header.
  */
 .site-header {
+    border-bottom: 1px solid $border-color;
+    padding:$header-tb-padding 0;
 	.header-contents {
 		.site-logo {
 			a {
-				display: inline-block;
+				display: block;
 			}
 		}
 	}

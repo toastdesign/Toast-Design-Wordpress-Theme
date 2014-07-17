@@ -11,6 +11,7 @@
 	float: right;
 
 	.site-menu {
+
 		li {
 			display: inline-block;
 			position: relative;
@@ -23,7 +24,7 @@
 		.children,
 		.sub-menu {
 			display: none;
-			padding: 0;
+			padding: 10px;
 			position: absolute;
 
 			background-color: #fff;
@@ -33,6 +34,11 @@
 			ul {
 				left: 100%;
 				top: 0;
+			}
+
+			li {
+				margin-bottom: 3px;
+				background-color: $color-1;
 			}
 		}
 

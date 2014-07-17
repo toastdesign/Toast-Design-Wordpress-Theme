@@ -36,10 +36,10 @@
         </div>
     <![endif]-->
 
+    <?php get_template_part('templates/content','header'); ?>
+
     <!-- MAIN CONTENT AREA -->
     <div class="container">
         <div class="row">
-
-            <?php get_template_part('templates/content','header'); ?>
 
 

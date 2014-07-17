@@ -6592,8 +6592,12 @@ form input[type="button"] {
 /**
  * Main header.
  */
+.site-header {
+  border-bottom: 1px solid #cccccc;
+  padding: 24px 0;
+}
 .site-header .header-contents .site-logo a {
-  display: inline-block;
+  display: block;
 }
 
 /**
@@ -6617,7 +6621,7 @@ form input[type="button"] {
 .site-navigation .site-menu .children,
 .site-navigation .site-menu .sub-menu {
   display: none;
-  padding: 0;
+  padding: 10px;
   position: absolute;
   background-color: #fff;
   z-index: 99999;
@@ -6626,6 +6630,11 @@ form input[type="button"] {
 .site-navigation .site-menu .sub-menu ul {
   left: 100%;
   top: 0;
+}
+.site-navigation .site-menu .children li,
+.site-navigation .site-menu .sub-menu li {
+  margin-bottom: 3px;
+  background-color: black;
 }
 .site-navigation .site-menu li:hover > ul,
 .site-navigation .site-menu ul li:hover > ul {
